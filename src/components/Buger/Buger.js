@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './Bugger.module.css';
 
-import BuggerIngredient from "./BuggerIngredient/BuggerIngredient";
+import BuggerIngredient from "./BugerIngredient/BuggerIngredient";
 
 const buger = (props) => {
     let transformIngredients = Object.keys(props.ingredients)

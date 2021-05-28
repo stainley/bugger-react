@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
 
 import Aux from '../../hoc/Aux';
-import Bugger from '../../components/Bugger/Buger';
-import BuildControls from '../../components/Bugger/BuildControls/BuildControls';
+import Bugger from '../../components/Buger/Buger';
+import BuildControls from '../../components/Buger/BuildControls/BuildControls';
+import Modal from '../../components/UI/Modal/Modal';
+import OrderSummarize from '../../components/Buger/OrderSummarize/OrderSummarize';
 
 const INGREDIENT_PRICES = {
     salad: 0.5,
@@ -78,6 +80,9 @@ class BuggerBuider extends Component {
         }
         return (
             <Aux>
+                <Modal>
+                    <OrderSummarize ingredients={this.state.ingredients}/>
+                </Modal>
                 <Bugger ingredients={this.state.ingredients}/>
                 <BuildControls
                     ingredientAdded={this.addIngredientHandler}
